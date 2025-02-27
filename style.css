@@ -1,0 +1,609 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+
+
+
+/* NAVBAR CODE */
+
+
+
+header {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #FFFFFF;
+    padding: 0.5em 0.5em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-family: sans-serif;
+    padding-left: 40px;
+}
+
+.logo a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.logo a:hover {
+    color: #FFD700;
+}
+
+.spacer {
+    flex-grow: 1;
+}
+
+nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 250px; /* Adjust spacing from the logo */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: right;
+}
+
+nav ul li {
+    margin: 0 30px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #FFD700;
+}
+
+.welcome-message {
+    font-size: 1.5em;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    left: 310px;
+    opacity: 0;
+    animation: fadeInOut 10s forwards;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    25% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* BACKGROUND CODE  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2em;
+    min-height: 100vh;
+    position: relative;
+    background: url('images/3.jpg') no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* Adjusted to a softer overlay for color matching */
+    z-index: 0;
+}
+
+.hero-text {
+    max-width: 50%;
+    /* Adjusted for a better layout on the left side */
+    z-index: 1;
+    color: white;
+    /* Text color for contrast */
+    padding-left: 4em;
+    /* Shifted content to the left */
+    padding-bottom: 4.5em;
+    padding-top: 4.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    /* Ensuring text readability */
+}
+
+
+
+.typewriter-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: xx-large;
+}
+
+.typewriter-line {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 4s steps(30, end) forwards;
+}
+
+.typewriter-line:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.typewriter-line:nth-child(2) {
+    animation-delay: 4s;
+}
+
+.typewriter-line:nth-child(3) {
+    animation-delay: 8s;
+}
+
+.typewriter-line:nth-child(4) {
+    animation-delay: 12s;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+.image-layout {
+    position: relative;
+    max-width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.image-layout img {
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+}
+
+.img1 {
+    position: relative;
+    top: 30px;
+    left: -335px;
+    width: 200px;
+    height: 180px;
+}
+
+.img2 {
+    position: relative;
+    top: 0px;
+    left: -100px;
+    width: 150px;
+    height: 150px;
+}
+
+.img3 {
+    position: relative;
+    top: -30px;
+    left: -325px;
+    width: 250px;
+    height: 200px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ABOUT ME CODE */
+
+
+
+
+
+
+
+
+
+
+
+
+
+.about {
+  
+    padding: 4em 2em;
+    background-color: #1e1e1e;
+    /* Dark background to match the theme */
+    color: #fff;
+    /* Light text color for readability */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 100%;
+    max-width: 1200px;
+    /* Maximum width to keep content centered */
+    gap: 2em;
+    /* Space between the boxes */
+}
+
+.about-box {
+    flex: 1;
+    padding: 2em;
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Light transparency for the boxes */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    /* Subtle shadow for depth */
+}
+
+.about-left {
+    background-color: rgba(71, 68, 67, 0.103);
+    /* Semi-transparent orange background */
+    color: #b9c512;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.about-right {
+    background-color: rgba(255, 255, 255, 0.9);
+    /* White background with slight transparency */
+    color: #333;
+    /* Dark text color for readability */
+    text-align: justify;
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        /* Stack the boxes vertically on smaller screens */
+    }
+
+    .about-box {
+        margin-bottom: 1em;
+    }
+
+    .about-left {
+        font-size: 1.5em;
+        /* Slightly smaller font on mobile */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* PROJECTS CODE */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* PROJECTS SECTION */
+.projects {
+    padding: 4em 2em;
+    background-color: #1e1e1e;
+    color: white;
+    text-align: center; /* Center the text, including the heading */
+    min-height: 100vh; /* Ensure the section takes up the full screen */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.projects-heading {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #FFD700;
+    margin-bottom: 2em; /* Space between the heading and project cards */
+    text-transform: uppercase;
+    cursor: pointer; /* Indicate it's clickable */
+}
+
+.projects-heading:hover {
+    color: #ffa500;
+}
+
+/* FLEXBOX LAYOUT FOR PROJECT CARDS */
+.projects-container {
+    display: flex;
+    justify-content: space-around; /* Even spacing */
+    align-items: stretch; /* Ensure all cards have equal height */
+    gap: 2em;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.project-card {
+    background-color: #2a2a2a;
+    color: white;
+    width: 30%; /* Increase card size */
+    padding: 1.8em;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.05); /* Slightly grow on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.project-card h3 {
+    font-size: 1.8em;
+    margin-bottom: 1em;
+    color: #FFD700;
+}
+
+.project-content p {
+    font-size: 1em;
+    margin-bottom: 1em;
+}
+
+.project-link {
+    display: inline-block;
+    background-color: #FFD700;
+    color: black;
+    padding: 0.7em 1.8em;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.project-link:hover {
+    background-color: #ffa500;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .projects-container {
+        flex-direction: column;
+    }
+
+    .project-card {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Contact Section */
+.contact {
+    background: url('images/DALL·E\ 2024-10-17\ 16.31.58\ -\ A\ dark\ tech-themed\ background\ featuring\ subtle\ lines\,\ geometric\ shapes\,\ and\ circuit-like\ patterns.\ The\ design\ should\ use\ darker\ tones\ like\ deep\ blue\,\ .webp') no-repeat center center/cover;
+    padding: 5em 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Glassmorphism Effect */
+.contact-container {
+    background: rgba(30, 30, 30, 0.8); /* Darker background for contrast */
+    padding: 3em;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Heading & Description */
+.contact-container h2 {
+    color: #ceb941;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.contact-container p {
+    color: #f1f1f1;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+/* Form Elements */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 5px;
+    margin-bottom: 12px;
+    background: rgba(50, 50, 50, 0.8); /* Darker input fields */
+    color: #ebebeb;
+    font-size: 1em;
+    outline: none;
+    transition: 0.3s ease-in-out;
+}
+
+/* Placeholder Styling */
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color:   #ceb941; /* Golden placeholder text */
+}
+
+/* Input Focus Effect */
+.contact-form input:focus,
+.contact-form textarea:focus {
+    background: rgba(70, 70, 70, 0.9);
+    border: 1px solid #FFD700; /* Golden border */
+}
+
+/* Submit Button */
+.contact-form button {
+    background:  #ceb941;
+    color: #121212;
+    padding: 14px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+/* Button Hover Effect */
+.contact-form button:hover {
+    background: #e6c300;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-container {
+        width: 90%;
+        padding: 2em;
+    }
+
+    .contact-container h2 {
+        font-size: 2em;
+    }
+}
+
+
+/* FOOTER STYLES */
+.footer {
+    background-color: #121212; /* Dark background */
+    color: #fff; /* White text */
+    text-align: center;
+    padding: 10px 0; /* Smaller padding */
+    font-size: 0.9em; /* Small text */
+    position: relative;
+    width: 100%;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* SOCIAL ICONS */
+.social-icons a {
+    color: #FFD700; /* Golden color */
+    margin: 0 8px;
+    font-size: 1.2em; /* Smaller icons */
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ffa500;
+}
+
+/* Responsive: Stack items on small screens */
+@media (max-width: 600px) {
+    .footer-container {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
